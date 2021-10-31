@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+History
+{% endblock %}
+
+{% block body %}
+<br />
+<h3>This is the page where you can see all the previously shortened URLs</h3>
+<br />
+<table>
+    <tr>
+        <th> url</th>
+        <th>shorten_url</th>
+    </tr>
+{% for i in result %}
+<tr>
+    <td> {{ i.url_user }}</td>
+    <td> {{ i.shorten_url }}</td>
+</tr>
+{% endfor %}
+    </table>
+{% endblock %}
